@@ -1,0 +1,68 @@
+﻿@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "ContactUs";
+}
+
+<div class=" col-md-3 ">
+    <h4>Add New Contact</h4>
+    <hr />
+
+    <form asp-controller="Products" asp-action="Save" method="post">
+        <div id="error-summary" asp-validation-summary="All"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mb-3">
+                    <label asp-for="FullName" class="form-label"></label>
+                    <input asp-for="FullName" class="form-control" />
+                    <span asp-validation-for="FullName"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Phone" class="form-label"></label>
+                    <input asp-for="Phone" placeholder="Add Phone" class="form-control" />
+                    <span asp-validation-for="Phone"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" placeholder="Add Email" class="form-control" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+
+                
+
+                <div class="mb-3 d-grid">
+                    <button class="btn btn-outline-primary" type="submit">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@{
+    @section Styles {
+        <style>
+            span, #error-summary {
+                color: red;
+            }
+        </style>
+    }
+
+    @section Scripts {
+        <script>
+            function submitConfirmation() {
+                var msg = confirm('Are you sure to save this product?');
+
+                if (!msg) {
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+
+        <script src="~/js/jquery-3.7.0.min.js"></script>
+        <script src="~/js/jquery.validate.min.js"></script>
+        <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+    }
+}
