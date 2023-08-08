@@ -6,9 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\css\Bootstrap\" />
-    <Folder Include="wwwroot\js\Bootstrap\" />
-  </ItemGroup>
-
 </Project>

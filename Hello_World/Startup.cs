@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Hello_World.Db;
 using Hello_World.Models;
+
 
 namespace Hello_World
 {
@@ -14,7 +14,7 @@ namespace Hello_World
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<IProductDb, ProductDb>();
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

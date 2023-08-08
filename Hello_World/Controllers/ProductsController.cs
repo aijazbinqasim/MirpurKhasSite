@@ -1,37 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Hello_World.Models;
-using Hello_World.Db;
+
 
 namespace Hello_World.Controllers
 {
     public class ProductsController : Controller
     {
+        private readonly IConfiguration _config;
 
-        private readonly IProductDb _productDb;
-
-        public ProductsController(IProductDb productDb)
+        public ProductsController(IConfiguration config)
         {
-            _productDb = productDb;
+            _config = config;
         }
 
-        public ViewResult Detail(int? id)
-        {
-            var product = _productDb.GetDetail(id);
-            // ViewData["Product"] = product;
-            // ViewBag.Product = product;
 
-            return View(product);
-        }
-
-        public ViewResult Products()
-        {
-            //ViewData["Title"] = "My Web | Products";
-
-            ViewBag.Title = "My Web | Products";
-
-            var products = _productDb.GetProducts();
-            return View(products);
-        }
 
         public ViewResult ContactUs()
         {
