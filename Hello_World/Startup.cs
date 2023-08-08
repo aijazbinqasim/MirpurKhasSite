@@ -37,7 +37,7 @@ namespace Hello_World
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=App}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
             //app.UseEndpoints(endpoints =>
