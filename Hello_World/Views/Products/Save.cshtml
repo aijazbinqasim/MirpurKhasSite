@@ -2,16 +2,16 @@
     ViewBag.Title = "Saved";
 }
 <div>
-    <h4>Product</h4>
+    <h4>Contact</h4>
     <hr />
     <table class="table table-striped " border="1">
 
         <tbody>
             <tr>
-                <td> @Html.DisplayNameFor(model=>model.Name)</td>
+                <td> @Html.DisplayNameFor(model=>model.FullName)</td>
             </tr>
             <tr>
-                <td>@Html.DisplayFor(model => model.Name)</td>
+                <td>@Html.DisplayFor(model => model.FullName)</td>
             </tr>
             <tr>
                 <td> @Html.DisplayNameFor(model => model.Phone)</td>
@@ -26,6 +26,19 @@
             <tr>
                 <td> @Html.DisplayFor(model => model.Email)</td>
             </tr>
+            <tr>
+                <td> @Html.DisplayNameFor(model => model.Subject)</td>
+            </tr>
+            <tr>
+                <td> @Html.DisplayFor(model => model.Subject)</td>
+            </tr>
+            <tr>
+                <td> @Html.DisplayNameFor(model => model.Message)</td>
+            </tr>
+            <tr>
+                <td> @Html.DisplayFor(model => model.Message)</td>
+            </tr>
+
 
            
         </tbody>
@@ -34,7 +47,7 @@
 
 <div>
 
-    <a asp-controller="Products" asp-action="ContactUs">add new Contact</a>
+    <a asp-controller="Products" asp-action="ContactUs">AddNewContact</a>
 
 </div>
 

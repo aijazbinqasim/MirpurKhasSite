@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Hello_World.Models;
+using MirpurKhasSite.Models;
 
 
 namespace Hello_World
@@ -37,7 +37,7 @@ namespace Hello_World
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=App}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
             //app.UseEndpoints(endpoints =>

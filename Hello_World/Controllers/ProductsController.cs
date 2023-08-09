@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Hello_World.Models;
+using MirpurKhasSite.Models;
 
 
 namespace Hello_World.Controllers
@@ -22,11 +22,11 @@ namespace Hello_World.Controllers
         }
 
         [HttpPost]
-        public ViewResult Save(Product product)
+        public ViewResult Save(MirpurKhasSite.Models.ContactUs product)
         {
             if (!ModelState.IsValid)
             {
-                return View("AddNew");
+                return View("AddNewContact");
             }
             // This -> Save(Product product) called automatic model binding.
             ViewBag.Title = "Contact Saved";
