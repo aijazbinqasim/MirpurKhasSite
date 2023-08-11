@@ -11,18 +11,22 @@
 
 </head>
 
-<body>
+<body style="background:linear-gradient(120deg,#376,#bee6ee)">
     
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark  " >
+    
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/css/mps.jpg">
-                <img src="~/css/mps.jpg" width="100" height="80" />
-            </a>
+            
+            <figure class="figure">
+                <img src="~/images/logoo.png" class="figure-img img-fluid rounded-circle" alt="Mps Logo" style="width:15%">
+            </figure>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="mynavbar" style="align-content:center"  >
-                <ul class="navbar-nav me-auto navbar-expand">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
@@ -43,6 +47,7 @@
             </div>
         </div>
     </nav>
+  
 
     <div class="container mt-3">
         @RenderBody()

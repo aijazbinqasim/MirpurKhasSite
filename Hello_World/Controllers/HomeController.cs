@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 
-namespace Hello_World.Controllers
+namespace MirpurKhasSite.Controllers
 {
     public class HomeController : Controller
     {

@@ -2,7 +2,7 @@
 using MirpurKhasSite.Models;
 
 
-namespace Hello_World.Controllers
+namespace MirpurKhasSite.Controllers
 {
     public class ProductsController : Controller
     {
@@ -26,7 +26,7 @@ namespace Hello_World.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View("AddNewContact");
+                return View("ContactUs");
             }
             // This -> Save(Product product) called automatic model binding.
             ViewBag.Title = "Contact Saved";
