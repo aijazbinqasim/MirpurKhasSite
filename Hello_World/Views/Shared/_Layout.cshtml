@@ -4,28 +4,28 @@
     <title>Mps.Com | @ViewBag.Title</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <partial name="_BsStyle.cshtml" />
 
     @RenderSection("Styles", false)
 
 </head>
 
-<body style="background:linear-gradient(120deg,#376,#bee6ee)">
-    
-    
+<body>
+
+
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
-            
-            <figure class="figure">
-                <img src="~/images/logoo.png" class="figure-img img-fluid rounded-circle" alt="Mps Logo" style="width:15%">
-            </figure>
+
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <img src="~/images/logoo.png" class="rounded-circle" alt="Mps Logo">
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              
 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
@@ -37,24 +37,25 @@
                         <a class="nav-link" asp-controller="Home" asp-action="Gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Products" asp-action="ContactUs">ContactUs</a>
+                        <a class="nav-link" asp-controller="Products" asp-action="ContactUs">Contact Us</a>
                     </li>
                 </ul>
+
                 <form class="d-flex">
-                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search">
                     <button class="btn btn-primary" type="button">Search</button>
                 </form>
             </div>
         </div>
     </nav>
-  
+
 
     <div class="container mt-3">
         @RenderBody()
     </div>
     <partial name="_BsJs.cshtml" />
 
-    
+
     @RenderSection("Scripts", false)
 
 </body>
